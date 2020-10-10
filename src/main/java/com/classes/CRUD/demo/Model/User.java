@@ -3,7 +3,7 @@ package com.classes.CRUD.demo.Model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "to-do")
+
 public class User {
     @Id
     @Column(name = "Id")

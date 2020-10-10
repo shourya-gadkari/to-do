@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>To-Do tasks</title>
@@ -25,8 +25,23 @@
     <br><br>
     <input type="submit" value="Add to task" id="button"></form>
 <hr>
-<!--<div th:each="temp:${object}">
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>password</th>
+    </tr>
 
-</div>-->
+    <div th:each="temp:${object}">
+        <tr>
+            <td th:text="${temp.id}">
+            <td th:text="${temp.name}">
+            <td th:text="${temp.password}">
+        </tr>
+    </div>
+    <form action="/remove" method="post">
+        <button type=“submit”>Delete</button>
+    </form>
+</table>
 </body>
 </html>
