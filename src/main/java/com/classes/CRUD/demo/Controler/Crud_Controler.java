@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Crud_Controler {
     @Autowired
     Main main;
-    @RequestMapping("/")
-    public String insert(){
+    @RequestMapping("/home")
+    public String home(){
         return "index";
     }
     @RequestMapping("/task")

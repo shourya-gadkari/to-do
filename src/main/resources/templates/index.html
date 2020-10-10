@@ -27,16 +27,12 @@
 <hr>
 <table>
     <tr>
-        <th>Id</th>
-        <th>Username</th>
-        <th>password</th>
+        <th>task</th>
     </tr>
 
     <div th:each="temp:${object}">
         <tr>
-            <td th:text="${temp.id}">
-            <td th:text="${temp.name}">
-            <td th:text="${temp.password}">
+            <td th:text="${temp.task}">
         </tr>
     </div>
     <form action="/remove" method="post">
