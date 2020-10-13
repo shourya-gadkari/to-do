@@ -15,7 +15,8 @@ public class Crud_Controller {
     @Autowired
     Main main;
     @RequestMapping("/")
-    public String home(){
+    public String home(Model model){
+        model.addAttribute("task","shourya");
         return "index";
     }
     @RequestMapping("/task")
