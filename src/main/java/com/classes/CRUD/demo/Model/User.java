@@ -11,22 +11,22 @@ public class User {
     public int id;
 
     @Column(name = "task")
-    String name;
+    String task;
 
-    public User(int id, String name) {
+    public User(int id, String task) {
         this.id = id;
-        this.name = name;
+        this.task = task;
     }
 
-    public User(String name) {
-        this.name = name;
+    public User(String task) {
+        this.task = task;
     }
 
-    public String getName() {
-        return name;
+    public String gettask() {
+        return task;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void settask(String task) {
+        this.task = task;
     }
 }

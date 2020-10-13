@@ -15,5 +15,15 @@ import org.springframework.stereotype.Service;
         User user = new User(task);
         userRepository.save(user);
         return "index";
+    }  
+
+    public String remove(String id) {
+        int id2 = Integer.parseInt(id);
+        userRepository.deleteById(id2);
+        return "Deleted";
     }
-}
+    public Object geteverything(){
+        Object obj = userRepository.findAll();
+        return obj;
+    }
+    }

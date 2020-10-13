@@ -8,14 +8,15 @@
         text-align: center;
             }
         #button{
-            display: inline;
-            background-color: black;
-            color: white;
+            background-color: red;
                 }
         #textbox{
         width: 500px;
 
         }
+        .Button{
+            display: inline;
+                }
     </style>
 </head>
 <body>
@@ -23,7 +24,7 @@
     <input type="text" name="task" placeholder="Enter your tasks" id="textbox" >
     <br>
     <br><br>
-    <input type="submit" value="Add to task" id="button"></form>
+    <input type="submit" value="Add to task" class = "Button"></form>
 <hr>
 <table>
     <tr>
@@ -33,11 +34,11 @@
     <div th:each="temp:${object}">
         <tr>
             <td th:text="${temp.task}">
+            <td><form action="/delete" method="post">
+            <button type=“submit” class="Button" id = "button">Delete</button>
+        </form> </td>
         </tr>
     </div>
-    <form action="/remove" method="post">
-        <button type=“submit”>Delete</button>
-    </form>
 </table>
 </body>
 </html>
