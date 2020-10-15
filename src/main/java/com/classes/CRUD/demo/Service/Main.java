@@ -17,8 +17,8 @@ import org.springframework.stereotype.Service;
         return "index";
     }  
 
-    public String remove(String id) {
-        int id2 = Integer.parseInt(id);
+    public String remove(int id) {
+        int id2 = id;
         userRepository.deleteById(id2);
         return "Deleted";
     }
